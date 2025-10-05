@@ -1,0 +1,107 @@
+================================================================
+  TIMS LIVE ROSTER FORMATTER - QUICK START GUIDE
+================================================================
+
+⚡ FASTEST WAY TO GET STARTED:
+
+1. Open "install.html" in your browser
+2. Drag the button to your bookmarks bar
+3. Go to TIMS roster page
+4. Click the bookmark
+5. Done!
+
+================================================================
+
+DESKTOP SETUP (Chrome, Edge, Firefox):
+----------------------------------------
+
+Step 1: Open install.html
+  - Double-click "install.html" in this folder
+  - Your browser will open the installer page
+
+Step 2: Show Your Bookmarks Bar
+  - Press Ctrl+Shift+B (Windows/Linux)
+  - Press Cmd+Shift+B (Mac)
+  - The bookmarks bar will appear below the address bar
+
+Step 3: Drag the Button
+  - Look for the "⚡ Format TIMS" button on the page
+  - Click and hold it
+  - Drag it to your bookmarks bar
+  - Release the mouse button
+
+Step 4: Use It
+  - Log into TIMS Employee Self Service
+  - Go to your roster page
+  - Click the "⚡ Format TIMS" bookmark
+  - The page will reformat instantly!
+
+================================================================
+
+MOBILE SETUP (Quick Version):
+------------------------------
+
+iPhone/iPad (Safari):
+1. Open install.html in Safari
+2. Tap "📱 Mobile" tab
+3. Tap "Copy Bookmarklet"
+4. Add a new bookmark (bookmark any page)
+5. Edit the bookmark
+6. Paste the copied code as the URL
+7. Rename it to "Format TIMS"
+8. Save
+
+Android (Chrome/Firefox):
+1. Open install.html
+2. Tap "📱 Mobile" tab
+3. Tap "Copy Bookmarklet"
+4. Add a new bookmark (bookmark any page)
+5. Edit the bookmark
+6. Paste the copied code as the URL
+7. Rename it to "Format TIMS"
+8. Save
+
+For detailed mobile instructions, see MOBILE_SETUP.txt
+
+================================================================
+
+WHAT YOU'LL SEE:
+----------------
+
+After clicking the bookmark on your TIMS roster:
+
+✓ Dark theme (easy on the eyes)
+✓ Today and Tomorrow at the top
+✓ All your shifts in date order (newest first)
+✓ Shift codes, hours, and times clearly displayed
+✓ OFF days dimmed out
+✓ Leave days highlighted in orange
+✓ Today's date highlighted in green
+
+================================================================
+
+TROUBLESHOOTING:
+---------------
+
+Nothing happens when I click the bookmark:
+→ Make sure you're on the TIMS roster page (not login)
+→ Refresh the TIMS page and try again
+
+Button won't drag on mobile:
+→ You can't drag on mobile - use the copy/paste method
+→ See "📱 Mobile" tab in install.html
+
+Dates look wrong:
+→ Check your device's date/time settings
+→ Make sure timezone is set correctly
+
+================================================================
+
+THAT'S IT!
+
+You're ready to use the TIMS Live Roster Formatter.
+
+For more information, see README.md
+For mobile help, see MOBILE_SETUP.txt
+
+================================================================

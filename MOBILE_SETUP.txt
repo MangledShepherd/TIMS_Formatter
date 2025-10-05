@@ -1,0 +1,203 @@
+================================================================
+  TIMS LIVE ROSTER FORMATTER - MOBILE SETUP GUIDE
+================================================================
+
+Mobile browsers don't allow dragging bookmarks, so you need to
+copy the bookmarklet code and create a bookmark manually.
+
+This guide shows you exactly how to do it on iPhone and Android.
+
+================================================================
+
+OPTION 1: AUTOMATIC (EASIEST)
+------------------------------
+
+1. Open "install.html" in your mobile browser
+2. Tap the "📱 Mobile" tab at the top
+3. Tap the "Copy Bookmarklet" button
+4. Follow the on-screen instructions for your device
+
+The install.html page has step-by-step instructions with
+screenshots and helpful tips.
+
+================================================================
+
+OPTION 2: MANUAL (iPhone/iPad with Safari)
+-------------------------------------------
+
+Step 1: Get the Bookmarklet Code
+  □ Open "install.html" in Safari
+  □ Tap "📱 Mobile" tab
+  □ Tap "Copy Bookmarklet" button
+  □ You'll see a message "Copied to clipboard!"
+
+Step 2: Create a Dummy Bookmark
+  □ Go to any website (like google.com)
+  □ Tap the Share button (square with arrow)
+  □ Scroll down and tap "Add Bookmark"
+  □ Name it "Format TIMS"
+  □ Tap "Save"
+
+Step 3: Edit the Bookmark
+  □ Tap the Bookmarks button (open book icon)
+  □ Find "Format TIMS" in your bookmarks
+  □ Tap "Edit" in the bottom right
+  □ Tap on the "Format TIMS" bookmark
+
+Step 4: Replace the URL
+  □ Tap the URL field (the web address)
+  □ Select all the text (tap and hold, then "Select All")
+  □ Tap "Paste" to paste the bookmarklet code
+  □ The URL should now start with "javascript:"
+  □ Tap "Done"
+  □ Tap "Done" again
+
+Step 5: Test It!
+  □ Log into TIMS on Safari
+  □ Go to your roster page
+  □ Tap the Bookmarks button
+  □ Tap "Format TIMS"
+  □ Your roster should reformat instantly!
+
+================================================================
+
+OPTION 3: MANUAL (Android - Chrome)
+------------------------------------
+
+Step 1: Get the Bookmarklet Code
+  □ Open "install.html" in Chrome
+  □ Tap "📱 Mobile" tab
+  □ Tap "Copy Bookmarklet" button
+  □ You'll see "Copied to clipboard!"
+
+Step 2: Create a Dummy Bookmark
+  □ Go to any website (like google.com)
+  □ Tap the three dots menu (⋮)
+  □ Tap the star icon to bookmark
+  □ Name it "Format TIMS"
+  □ Tap "Save"
+
+Step 3: Edit the Bookmark
+  □ Tap the three dots menu (⋮)
+  □ Tap "Bookmarks"
+  □ Find "Format TIMS"
+  □ Tap and hold on "Format TIMS"
+  □ Tap "Edit"
+
+Step 4: Replace the URL
+  □ Tap the URL field
+  □ Select all the text
+  □ Long-press and tap "Paste"
+  □ The URL should now start with "javascript:"
+  □ Tap "Save" or the checkmark
+
+Step 5: Test It!
+  □ Log into TIMS in Chrome
+  □ Go to your roster page
+  □ Tap the three dots menu (⋮)
+  □ Tap "Bookmarks"
+  □ Tap "Format TIMS"
+  □ Your roster should reformat!
+
+================================================================
+
+OPTION 4: MANUAL (Android - Firefox)
+-------------------------------------
+
+Step 1: Get the Bookmarklet Code
+  □ Open "install.html" in Firefox
+  □ Tap "📱 Mobile" tab
+  □ Tap "Copy Bookmarklet" button
+  □ You'll see "Copied to clipboard!"
+
+Step 2: Create a Dummy Bookmark
+  □ Go to any website
+  □ Tap the three dots menu (⋮)
+  □ Tap the star icon
+  □ Name it "Format TIMS"
+  □ Tap "Add"
+
+Step 3: Edit the Bookmark
+  □ Type "about:bookmarks" in the address bar
+  □ Find "Format TIMS"
+  □ Tap on it
+
+Step 4: Replace the URL
+  □ Tap the "Location" field
+  □ Select all the text
+  □ Long-press and tap "Paste"
+  □ The location should start with "javascript:"
+  □ Tap "Save"
+
+Step 5: Test It!
+  □ Log into TIMS in Firefox
+  □ Go to your roster page
+  □ Type "format" in the address bar
+  □ Your bookmark should appear
+  □ Tap it to format the page!
+
+================================================================
+
+TIPS FOR MOBILE:
+----------------
+
+✓ Bookmarklet should start with "javascript:"
+  If it doesn't, you pasted the wrong thing
+
+✓ The code is VERY long (10,000+ characters)
+  This is normal! Don't worry about it.
+
+✓ Some browsers might complain
+  Try a different browser if one doesn't work
+
+✓ You only need to set this up once
+  The bookmark stays in your browser
+
+✓ Works offline (after loading TIMS)
+  Once you load the TIMS page, the bookmarklet works
+
+================================================================
+
+TROUBLESHOOTING MOBILE:
+-----------------------
+
+"The bookmark does nothing"
+→ Make sure the URL starts with "javascript:"
+→ Make sure you copied the ENTIRE code
+→ Try deleting and recreating the bookmark
+
+"Can't find my bookmarks"
+→ iPhone Safari: Tap the book icon
+→ Android Chrome: Menu → Bookmarks
+→ Android Firefox: Type bookmark name in address bar
+
+"The code won't paste"
+→ Make sure you tapped "Copy Bookmarklet" first
+→ Try copying again
+→ Some browsers: long-press the URL field to paste
+
+"Page goes blank"
+→ You might not be on the roster page
+→ Make sure you're logged into TIMS first
+→ Refresh the TIMS roster page and try again
+
+================================================================
+
+STILL NEED HELP?
+----------------
+
+1. Check the "📱 Mobile" tab in install.html
+   It has detailed instructions with screenshots
+
+2. Try using a different browser
+   Chrome, Firefox, and Safari all work
+
+3. Make sure you're copying the ENTIRE code
+   It's over 10,000 characters - that's normal!
+
+================================================================
+
+That's it! Once set up, you just tap the bookmark whenever
+you're viewing your TIMS roster and it formats instantly.
+
+================================================================
