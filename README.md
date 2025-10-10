@@ -1,164 +1,139 @@
-# TIMS Live Roster Formatter - V2
+# TIMS Live Roster Formatter - V3
 
-**One-click formatting of your TIMS roster with live data!**
-
-This bookmarklet reformats your TIMS Employee Self Service roster page into a mobile-friendly, dark-themed view with easy-to-read shift information.
+**One-tap formatting of your TIMS roster - simplified for mobile!**
 
 ---
 
-## ✨ Features
+## Quick Setup (30 seconds)
 
-- 🌙 **Dark Theme** - Easy on the eyes with modern dark UI
-- 📱 **Mobile Optimized** - Works perfectly on phones and tablets
-- 🔄 **Live Data** - Always shows current roster from TIMS (no offline files)
-- ⚡ **Instant** - One click to reformat any TIMS roster page
-- 🎯 **Smart Filtering** - Removes duplicate OFF entries, shows only relevant shifts
-- 📅 **Quick View** - See today and tomorrow at a glance
-- 🔍 **Auto-scroll** - Automatically highlights and scrolls to today's date
+### Step 1: Copy the Bookmarklet Code
 
----
+Copy this entire line:
 
-## 🚀 Quick Start
+```
+javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/MangledShepherd/TIMS_Formatter@main/tims_live_formatter.js';document.head.appendChild(s);})();
+```
 
-### Desktop Installation (Chrome, Edge, Firefox)
+### Step 2: Create a Bookmark
 
-1. **Open** `install.html` in your browser
-2. **Drag** the "⚡ Format TIMS" button to your bookmarks bar
-3. **Go** to your TIMS roster page
-4. **Click** the bookmark to format the page
+1. **Create a new bookmark** in your mobile browser
+2. **Name it:** `F` (just the letter F - makes it easy to search)
+3. **Paste** the code from Step 1 as the bookmark URL
 
-### Mobile Installation (iPhone, Android)
+### Step 3: Done!
 
-1. **Open** `install.html` on your phone
-2. **Tap** the "📱 Mobile" tab
-3. **Follow** the step-by-step instructions for your device
+You're ready to use it!
 
 ---
 
-## 📋 What's Included
+## How to Use
 
-- **install.html** - Interactive installer page (open this first!)
-- **bookmarklet.txt** - Bookmarklet code for manual copy/paste
-- **tims_live_formatter.js** - Source code (readable version)
-- **README.md** - This file
-- **QUICK_START.txt** - Simple text instructions
-- **MOBILE_SETUP.txt** - Detailed mobile installation guide
+1. **Open your TIMS roster page** in your mobile browser
+2. **Tap the address bar** and type `F`
+3. **Select your "F" bookmark** from the suggestions
+4. **Your roster is now formatted!**
 
----
+### Why search for it instead of opening from bookmarks?
 
-## 💡 How It Works
-
-The bookmarklet is a small piece of JavaScript that runs directly on the TIMS website:
-
-1. You click the bookmark while viewing your TIMS roster
-2. The script reads the roster table data from the current page
-3. It filters out duplicate entries and organizes the data
-4. A new formatted page replaces the TIMS page
-5. You see your roster in an easy-to-read, mobile-friendly format
-
-**No data leaves your browser - everything runs locally!**
+On most mobile browsers (especially Brave, Chrome), you can't run a bookmarklet on an existing page from the bookmarks menu - it tries to open it as a new page. The workaround is to search for it in the address bar, which runs the bookmarklet on the current page.
 
 ---
 
-## 🔧 Troubleshooting
+## What This Does
 
-### The bookmarklet doesn't appear to do anything
+- 🌙 **Dark Theme** - Easy on the eyes
+- 📱 **Mobile Optimized** - Perfect for phones
+- 🔄 **Live Data** - Always shows your current roster from TIMS
+- ⚡ **Instant** - One tap to reformat
+- 🎯 **Smart** - Removes duplicate OFF entries
+- 📅 **Quick View** - See today and tomorrow at the top
 
+---
+
+## Detailed Instructions for Sharing
+
+When helping someone install this, you can:
+
+1. **Text them the bookmarklet code** (copy from `bookmarklet_short.txt`)
+2. **Walk them through:**
+   - Create a new bookmark
+   - Name it "F"
+   - Paste the code as the URL
+   - Save it
+
+That's it! No downloads, no installer, no complicated steps.
+
+---
+
+## Desktop Users
+
+This works on desktop too! You can drag the bookmarklet to your bookmarks bar or follow the same copy-paste method.
+
+---
+
+## What's Different in V3?
+
+**V3 is simplified:**
+- No installer page
+- No zip files to download
+- Just copy the link and create a bookmark
+- Perfect for quickly sharing with coworkers
+
+**V2 had:**
+- install.html with drag-and-drop
+- Multiple instruction files
+- More steps to follow
+
+V3 cuts right to the chase - just the short link and simple instructions.
+
+---
+
+## Troubleshooting
+
+**The bookmarklet doesn't do anything:**
 - Make sure you're on the TIMS roster page (not the login page)
-- Try refreshing the TIMS roster page first, then click the bookmark
+- Try refreshing the TIMS page first
 
-### Dates are showing incorrectly
+**Can't find the bookmark when searching:**
+- Make sure you named it "F" (capital F)
+- Try typing "format" if "F" doesn't work
 
-- This version uses your local timezone - dates should be correct
-- Make sure your computer/phone's date and time are set correctly
-
-### On mobile, I can't drag the button
-
-- Use the "📱 Mobile" tab in install.html
-- Copy the bookmarklet code and create the bookmark manually
-- See MOBILE_SETUP.txt for detailed instructions
+**Dates look wrong:**
+- Check your phone's date/time settings
+- Make sure automatic timezone is enabled
 
 ---
 
-## 🆚 Version Comparison
+## For Developers
 
-**V1 (Offline Python):**
-- Requires downloading HTML file from TIMS
-- Runs Python script locally
-- Creates static HTML file
-- Good for archiving rosters
+Want to customize the formatter? See `DEVELOPER_GUIDE.md` for technical documentation.
 
-**V2 (Live Bookmarklet):** ⭐ You are here
-- Works directly on TIMS website
-- One click, instant formatting
-- Always shows current roster data
-- No files to download or manage
-- Works on any device with a browser
+The bookmarklet loads the script from GitHub, so any updates to `tims_live_formatter.js` are automatically available to all users.
 
 ---
 
-## 🔒 Privacy & Security
+## Privacy & Security
 
 - **No data collection** - Everything runs in your browser
 - **No external servers** - Script doesn't send data anywhere
-- **No installation required** - Just a bookmark
 - **Open source** - You can read the code in `tims_live_formatter.js`
 
 ---
 
-## 📱 Compatibility
+## Share With Coworkers
 
-✅ **Desktop Browsers:**
-- Chrome (Windows, Mac, Linux)
-- Microsoft Edge
-- Firefox
-- Safari (Mac)
-- Opera
+To share this with someone:
 
-✅ **Mobile Browsers:**
-- Safari (iPhone/iPad)
-- Chrome (Android)
-- Firefox (Android)
-- Samsung Internet (Android)
+1. **Send them the bookmarklet code** (from `bookmarklet_short.txt`)
+2. **Tell them:**
+   - Create a bookmark named "F"
+   - Paste the code as the URL
+   - Use it by searching "F" in the address bar on TIMS
+
+Or just send them this whole folder!
 
 ---
 
-## ❓ FAQ
-
-**Q: Do I need to install anything?**
-A: No! It's just a bookmark that contains JavaScript code.
-
-**Q: Will this work when TIMS updates?**
-A: As long as TIMS keeps the same table structure, yes. If TIMS changes significantly, the bookmarklet may need updating.
-
-**Q: Can I use this on multiple devices?**
-A: Yes! Install the bookmarklet on each device separately.
-
-**Q: Is my roster data safe?**
-A: Yes. The bookmarklet only reads data from the current page and doesn't send it anywhere.
-
-**Q: Can I share this with colleagues?**
-A: Absolutely! Share the whole V2 folder.
-
----
-
-## 🆘 Support
-
-If you encounter issues:
-
-1. Make sure you're using the latest version of `install.html`
-2. Check that you're on the actual TIMS roster page
-3. Try clearing your browser cache and reinstalling the bookmarklet
-4. On mobile, ensure you've followed the exact steps in MOBILE_SETUP.txt
-
----
-
-## 📝 License
-
-Free to use and share. Made for TIMS users by a TIMS user.
-
----
-
-**Version:** 2.0
+**Version:** 3.0
 **Last Updated:** October 2025
-**Compatibility:** TIMS Employee Self Service (2025)
+**GitHub:** https://github.com/MangledShepherd/TIMS_Formatter
