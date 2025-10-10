@@ -671,14 +671,80 @@ Before deploying changes:
 
 ---
 
+## Planned Features
+
+### Duty Break Location Display
+
+**Status:** Planned - Not yet implemented
+
+**Purpose:** Display lunch break locations for each duty to help employees plan meal storage (cooler box vs depot fridge).
+
+**How it will work:**
+
+1. **Data File:** Create `duty_break_locations.json` on GitHub:
+   ```json
+   {
+     "D815": {
+       "breakLocation": "Depot",
+       "icon": "🏢"
+     },
+     "D533": {
+       "breakLocation": "Offsite",
+       "icon": "🚗"
+     }
+   }
+   ```
+
+2. **Script Enhancement:** Modify `tims_live_formatter.js` to:
+   - Fetch the JSON file from GitHub CDN
+   - Parse duty codes from shift data (e.g., "D815 n" → "D815")
+   - Look up duty code in the JSON data
+   - Display break location alongside shift information
+
+3. **Display Example:**
+   ```
+   D815 n
+   8:15 hours
+   15:25-20:25
+   🏢 Depot break - fridge available
+   ```
+
+**Implementation Notes:**
+
+- **Data Source:** Duty journals (PDFs) need to be manually scraped to build the JSON file
+- **Duty Code Parsing:** Extract from shift data before the space (e.g., "D815 n" → take first word)
+- **Suffix Handling:** Some duties have suffixes (n = night?, t = twilight?). Parse base duty code.
+- **Graceful Fallback:** If duty code not in JSON, don't show break info (no errors)
+- **CDN Caching:** Changes to JSON file may take a few minutes to propagate via CDN
+- **File Location:** `duty_break_locations.json` in repository root, loaded via jsDelivr
+
+**User Benefits:**
+
+- Quick decision: cooler box vs depot fridge for packed lunch
+- No need to manually check duty journals
+- Information updates automatically when JSON file is updated
+
+**Development Tasks (when ready to implement):**
+
+1. [ ] Extract duty break locations from PDF journals
+2. [ ] Create `duty_break_locations.json` with all duty codes
+3. [ ] Add JSON fetch to `tims_live_formatter.js`
+4. [ ] Implement duty code parser (handle suffixes like 'n', 't')
+5. [ ] Update `generateHTML()` to display break location
+6. [ ] Add CSS styling for break location display
+7. [ ] Test with duties that have/don't have break data
+8. [ ] Update README.md to mention break location feature
+9. [ ] Commit and push to GitHub
+
+---
+
 ## Contact & Support
 
 - **GitHub Repo:** https://github.com/MangledShepherd/TIMS_Formatter
 - **Issues:** Report on GitHub Issues tab
-- **Version:** See VERSION.txt
 
 ---
 
-**Last Updated:** October 6, 2025
+**Last Updated:** October 10, 2025
 **Maintainer:** MangledShepherd
 **Generated with:** Claude Code
