@@ -23,8 +23,8 @@
         const allDays = [];
         const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-        // Find all table rows
-        const rows = document.querySelectorAll('table tbody tr');
+        // Find all table rows (Vue.js uses v-data-table__tr class)
+        const rows = document.querySelectorAll('tr.v-data-table__tr');
 
         rows.forEach(row => {
             const cells = row.querySelectorAll('td');
