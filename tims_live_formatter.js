@@ -1,11 +1,5 @@
 // TIMS Live Roster Formatter - Bookmarklet Version
 // This script reformats the TIMS roster page in real-time
-//
-// PLANNED FEATURE: Duty Break Location Display
-// Future enhancement will fetch duty_break_locations.json from GitHub
-// to display lunch break locations (Depot/Offsite) for each duty code.
-// This helps employees decide whether to bring a cooler box or use the depot fridge.
-// See DEVELOPER_GUIDE.md "Planned Features" section for details.
 
 (function() {
     'use strict';
@@ -62,10 +56,6 @@
                     const dayName = dayNames[currentDate.getDay()];
                     const shiftData = cells[3 + i].textContent.trim();
 
-                    // TODO: Parse duty code from shiftData (e.g., "D815 n" -> "D815")
-                    // Future: Fetch break location from duty_break_locations.json
-                    // and add breakLocation property to day object
-
                     allDays.push({
                         date: currentDate,
                         dateStr: dateStr,
@@ -74,7 +64,6 @@
                         shiftData: shiftData,
                         dept: dept,
                         employee: employee
-                        // breakLocation: "Depot" | "Offsite" | null (to be added)
                     });
                 }
             }

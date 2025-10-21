@@ -39,6 +39,38 @@ On most mobile browsers (especially Brave, Chrome), you can't run a bookmarklet 
 
 ---
 
+## ⚠️ Important: Browser Cache Issue
+
+**If you get "No roster data found" error after an update:**
+
+Your browser may be using an old cached version of the script. Here's how to fix it:
+
+### Quick Fix (Desktop & Mobile):
+1. Go to your TIMS roster page
+2. Press **Ctrl+Shift+R** (Windows) or **Cmd+Shift+R** (Mac) to hard refresh
+3. Run the bookmarklet again - should work now!
+
+### If Hard Refresh Doesn't Work:
+
+**Desktop (Brave/Chrome/Edge):**
+1. Press **Ctrl+Shift+Delete**
+2. Select **"Cached images and files"** only (don't clear cookies/passwords!)
+3. Time range: **"All time"**
+4. Click **"Clear data"**
+5. Refresh TIMS page and run bookmarklet
+
+**Mobile (Brave/Chrome):**
+1. Open Settings → Privacy → Clear browsing data
+2. Select **"Cached images and files"** only
+3. Tap **"Clear data"**
+4. Refresh TIMS and run bookmarklet
+
+**Test in Incognito/Private Mode:**
+- If it works in incognito but not normal browser → definitely a cache issue
+- Use the steps above to clear cache
+
+---
+
 ## What This Does
 
 - 🌙 **Dark Theme** - Easy on the eyes
@@ -90,9 +122,16 @@ V3 cuts right to the chase - just the short link and simple instructions.
 
 ## Troubleshooting
 
+**"No roster data found" error:**
+- **Most common:** Browser cache issue - see the "Browser Cache Issue" section above for fix
+- Make sure you're on the TIMS roster page (not the login page)
+- Try hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+- Test in incognito mode to confirm it's a cache issue
+
 **The bookmarklet doesn't do anything:**
 - Make sure you're on the TIMS roster page (not the login page)
 - Try refreshing the TIMS page first
+- Check if you have JavaScript enabled
 
 **Can't find the bookmark when searching:**
 - Make sure you named it "F" (capital F)
