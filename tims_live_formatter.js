@@ -28,11 +28,13 @@
 
         rows.forEach(row => {
             const cells = row.querySelectorAll('td');
-            if (cells.length >= 11) {
+            // NEW TABLE STRUCTURE (Oct 2025): 10 columns instead of 11
+            // Cols: Week | Location | Duty | Sun-Sat (7 days)
+            if (cells.length >= 10) {
                 const weekStart = cells[0].textContent.trim();
-                const dept = cells[1].textContent.trim();
-                const employee = cells[2].textContent.trim();
-                const rosterType = cells[3].textContent.trim();
+                const dept = cells[1].textContent.trim(); // Now "Location"
+                const employee = cells[2].textContent.trim(); // Now "Duty"
+                const rosterType = "Normal"; // No longer in table, use default
 
                 // Skip invalid rows
                 if (!weekStart || weekStart.includes('No data')) return;
@@ -51,14 +53,14 @@
                     return;
                 }
 
-                // Process each day (cells 4-10 are the 7 days)
+                // Process each day (cells 3-9 are the 7 days - changed from 4-10)
                 for (let i = 0; i < 7; i++) {
                     const currentDate = new Date(startDate);
                     currentDate.setDate(currentDate.getDate() + i);
 
                     const dateStr = getLocalDateStr(currentDate);
                     const dayName = dayNames[currentDate.getDay()];
-                    const shiftData = cells[4 + i].textContent.trim();
+                    const shiftData = cells[3 + i].textContent.trim();
 
                     // TODO: Parse duty code from shiftData (e.g., "D815 n" -> "D815")
                     // Future: Fetch break location from duty_break_locations.json
