@@ -427,21 +427,36 @@
             } else if (lines.length > 0) {
                 html += '            <div class="shift-details">\n';
 
+                // NEW FORMAT (Oct 2025): Hours moved to last line, no " hours" suffix
+                // Format: shift_code, times..., hours
+                // Leave format: leave_type, times..., hours, leave_code
+
+                // Detect leave code (last line is 3 uppercase letters like "ANL")
+                const lastLine = lines[lines.length - 1];
+                const hasLeaveCode = isLeave && /^[A-Z]{2,4}$/i.test(lastLine);
+
+                // Find hours line (second-to-last if leave code exists, otherwise last)
+                let hoursLineIdx = hasLeaveCode ? lines.length - 2 : lines.length - 1;
+                let hoursText = lines[hoursLineIdx];
+
+                // Times are between line 1 and the hours line
+                let timesLines = lines.slice(1, hoursLineIdx);
+
                 if (isLeave) {
                     html += `                <span class="leave-badge">${lines[0]}</span>\n`;
-                    if (lines.length > 1) {
-                        html += `                <span class="shift-hours">${lines[1]} hours</span>\n`;
+                    if (hoursText) {
+                        html += `                <span class="shift-hours">${hoursText} hours</span>\n`;
                     }
-                    if (lines.length > 2) {
-                        html += `                <span class="shift-times">${lines.slice(2).join(' | ')}</span>\n`;
+                    if (timesLines.length > 0) {
+                        html += `                <span class="shift-times">${timesLines.join(' | ')}</span>\n`;
                     }
                 } else {
                     html += `                <span class="shift-code">${lines[0]}</span>\n`;
-                    if (lines.length > 1) {
-                        html += `                <span class="shift-hours">${lines[1]} hours</span>\n`;
+                    if (hoursText) {
+                        html += `                <span class="shift-hours">${hoursText} hours</span>\n`;
                     }
-                    if (lines.length > 2) {
-                        html += `                <span class="shift-times">${lines.slice(2).join(' | ')}</span>\n`;
+                    if (timesLines.length > 0) {
+                        html += `                <span class="shift-times">${timesLines.join(' | ')}</span>\n`;
                     }
                 }
 
