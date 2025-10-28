@@ -248,6 +248,11 @@
 
         .day-entry.leave { border-left-color: #ffa726; }
 
+        .day-entry.ado-day {
+            border-left-color: #ff9800;
+            background: #2e2419;
+        }
+
         .day-entry.today {
             border-left-width: 6px;
             border-left-color: #4caf50;
@@ -349,6 +354,16 @@
             font-size: 12px;
         }
 
+        .ado-badge {
+            background: #ff9800;
+            color: #000;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
         @media (max-width: 600px) {
             .quick-view-grid { grid-template-columns: 1fr; }
             .day-header {
@@ -389,10 +404,12 @@
         days.forEach(day => {
             const lines = day.shiftData.split('\n').map(l => l.trim()).filter(l => l);
             const isOff = !lines.length || day.shiftData.toUpperCase() === 'OFF';
-            const isLeave = day.shiftData.includes('A/L') || day.shiftData.includes('PHOL') || day.shiftData.includes('ADO/Off');
+            const isADO = day.shiftData.includes('ADO/Off') || day.shiftData.includes('ADO');
+            const isLeave = day.shiftData.includes('A/L') || day.shiftData.includes('PHOL') || isADO;
 
             let entryClass = 'day-entry';
             if (isOff) entryClass += ' off';
+            else if (isADO) entryClass += ' ado-day';
             else if (isLeave) entryClass += ' leave';
             if (day.dateStr === todayStr) entryClass += ' today';
 
@@ -434,7 +451,8 @@
                 let timesLines = lines.slice(1, hoursLineIdx);
 
                 if (isLeave) {
-                    html += `                <span class="leave-badge">${lines[0]}</span>\n`;
+                    const badgeClass = isADO ? 'ado-badge' : 'leave-badge';
+                    html += `                <span class="${badgeClass}">${lines[0]}</span>\n`;
                     if (hoursText) {
                         html += `                <span class="shift-hours">${hoursText} hours</span>\n`;
                     }
